@@ -29,7 +29,8 @@ class Detection(object):
     def __init__(self, tlbr, confidence, image_np):
         # ... (BEGIN) me adding
         feature = [1]
-        self.height, self.width = image_np.shape
+        self.height = image_np.shape[0]
+        self.width = image_np.shape[1]
         self.tlbr = [tlbr[1]*self.width, tlbr[0]*self.height,
                      tlbr[3]*self.width, tlbr[2]*self.height]
 
