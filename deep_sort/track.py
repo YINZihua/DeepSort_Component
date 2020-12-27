@@ -111,11 +111,12 @@ class Track:
 
     # ... (BEGIN) me adding
     def to_tlbr_norm(self, width, height):
-        tlbr_norm = self.to_tlbr.copy()
+        tlbr_norm = self.to_tlbr().copy()
         tlbr_norm[0] /= width
         tlbr_norm[1] /= height
         tlbr_norm[2] /= width
         tlbr_norm[3] /= height
+        return tlbr_norm
     # ... (END) me adding
 
     def predict(self, kf):
